@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="lib/styles.css">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <!-- calculator -->
+  <div class="calculator">
+
+    <!-- display -->
+    
+    <div class="display">
+
+      <div class="container">
+        <input type="text" class="in" disabled>
+        <input type="text" class="output" disabled>
+      </div>
+      <div class="button-container">
+        <button value="←" class="operator">&lharu;</button>
+      </div>
+    </div>
+    <!-- keys -->
+    <div class="keys">
+      <!-- 4 rows of keys -->
+      <div class="row">
+        <button value="+/-" class="operator">&plusmn;</button>
+        <button value="√" class="operator">&radic;</button>
+        <button value="%" class="operator">%</button>
+        <button value="/" class="operator">&divide;</button>
+      </div>
+      <div class="row">
+        <button value="MRC" class="operator">MRC</button>
+        <ul class="memory-list"></ul>
+        <button value="M-" class="operator">M-</button>
+        <button value="M+" class="operator">M+</button>
+        <button value="*"class="operator">&times;</button>
+      </div>
+      <div class="row">
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button value="-" class="operator">-</button>
+      </div>
+      <div class="row">
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button value="+" class="operator">+</button>
+      </div>
+      <div class="row">
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button value="=" class="operator">=</button>
+      </div>
+      <div class="row">
+        <button value="C" class="operator">C</button>
+        <button value="0">0</button>
+        <button value="." class="operator">&#8228;</button>
+        <button value="" class="blank"></button>
+      </div>
+    </div>
+
+  </div>
+  <!-- calculator body ends -->
+  
+  <script type="text/javascript" src="lib/calculator.js"></script>
+</body>
+</html>
