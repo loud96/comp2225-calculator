@@ -39,6 +39,23 @@ describe('Calculator division Function', () => {
       //Verify that the result is correct
       cy.get('.output').should('have.value', '3.25');
     });
+
+    it('should handle multiple decimal numbers in division', () => {
+      // Enter decimal numbers and perform division
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="/"]').click();
+      cy.get('button[value="0"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+
+      cy.get('button[value="="]').click();
+
+      //Verify that the result is correct
+      cy.get('.output').should('have.value', '8.5');
+    });
   
     it('should handle division with zero', () => {
       //divide a number by zero 

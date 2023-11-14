@@ -39,6 +39,30 @@ describe('Calculator Addition Function', () => {
       //Verify that the result is correct
       cy.get('.output').should('have.value', '8.5');
     });
+
+    it('should handle multiple decimal numbers in addition', () => {
+      // Enter decimal numbers and perform addition
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="7"]').click();
+      cy.get('button[value="+"]').click();
+      cy.get('button[value="3"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="+"]').click();
+      cy.get('button[value="7"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="+"]').click();
+      cy.get('button[value="3"]').click();
+      cy.get('button[value="="]').click();
+
+      cy.get('button[value="="]').click();
+  
+      //Verify that the result is correct
+      cy.get('.output').should('have.value', '8.5');
+    });
   
     it('should handle addition with zero', () => {
       // Add zero to a number

@@ -39,6 +39,22 @@ describe('Calculator multiplication Function', () => {
       //Verify that the result is correct
       cy.get('.output').should('have.value', '13');
     });
+
+    it('should handle multiple decimal numbers in multiplication', () => {
+      // Enter decimal numbers and perform multiplication
+      cy.get('button[value="2"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="*"]').click();
+      cy.get('button[value="0"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+
+      cy.get('button[value="="]').click();
+
+      //Verify that the result is correct
+      cy.get('.output').should('have.value', '8.5');
+    });
   
     it('should handle multiplication with zero', () => {
       //multiply a number by zero 

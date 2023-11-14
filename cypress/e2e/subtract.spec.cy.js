@@ -39,6 +39,22 @@ describe('Calculator subtraction Function', () => {
       //Verify that the result is correct
       cy.get('.output').should('have.value', '2.5');
     });
+
+    it('should handle multiple decimal numbers in subtraction', () => {
+      // Enter decimal numbers and perform subtraction
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="-"]').click();
+      cy.get('button[value="8"]').click();
+      cy.get('button[value="."]').click();
+      cy.get('button[value="5"]').click();
+      cy.get('button[value="="]').click();
+
+      //Verify that the result is correct
+      cy.get('.output').should('have.value', '8.5');
+    });
   
     it('should handle subtraction with zero', () => {
       // subtract a number from zero 
